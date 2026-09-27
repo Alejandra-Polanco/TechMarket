@@ -55,7 +55,7 @@ function AuthModal() {
           </svg>
         </button>
 
-        <div className="auth-modal__logo">Ferretería <span>Ernesto's</span></div>
+        <div className="auth-modal__logo">Tech <span>Market</span></div>
 
         <div className="auth-tabs">
           <button className={`auth-tab ${tab === 'login' ? 'active' : ''}`} onClick={() => setTab('login')}>

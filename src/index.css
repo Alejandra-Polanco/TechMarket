@@ -780,4 +780,175 @@ ul { list-style: none; }
 .track-step.done .track-dot svg { display: block; }
 .track-dot svg { display: none; width: 12px; height: 12px; color: #fff; }
 .track-label { font-size: 0.65rem; color: var(--subtle); text-align: center; line-height: 1.2; }
-.track-step.done .track-label { color: var(--accent); font-weight: 600; }
+.track-step.done .track-label { color: var(--accent); font-weight: 600; } 
+
+
+
+
+/* =========================================================
+   MODAL - INFORMACIÓN DEL FOOTER
+   ========================================================= */
+
+.footer-info-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.footer-info-link:hover {
+  color: #ff6633;
+}
+
+.info-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.info-modal {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: infoModalEntrada 0.2s ease;
+}
+
+.info-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: none;
+  background: none;
+  color: #555;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.info-modal__close:hover {
+  color: #ff6633;
+}
+
+.info-modal__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #ff6633;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.info-modal h2 {
+  margin: 0 0 20px;
+  color: #1a1a1a;
+  font-size: 26px;
+}
+
+.info-modal__content {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.info-modal__content p {
+  margin: 0 0 15px;
+}
+
+.info-question {
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-question:last-child {
+  border-bottom: none;
+}
+
+.info-question strong {
+  display: block;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.info-question p {
+  margin: 0;
+}
+
+.info-modal__button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6633;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.info-modal__button:hover {
+  background: #e95420;
+}
+
+@keyframes infoModalEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-modal {
+    padding: 26px 20px;
+  }
+
+  .info-modal h2 {
+    font-size: 22px;
+  }
+}
+
+/* Nombre corporativo debajo del logo TechMarket */
+.header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1;
+}
+
+.header__company {
+  margin-top: 5px;
+  padding-left: 2px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #777;
+  white-space: nowrap;
+}

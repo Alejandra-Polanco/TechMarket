@@ -190,8 +190,7 @@ function PromocionesPage() {
   }, [])
 
   const activeDescuentos = descuentos.filter(d => d.activo !== false)
-  const expiredDescuentos = descuentos.filter(d => d.activo === false || !isVigente(d.fecha_fin))
-
+  
   return (
     <main>
       <Breadcrumb current="Promociones" />
@@ -208,18 +207,18 @@ function PromocionesPage() {
             borderRadius: '20px', padding: '0.3rem 0.875rem', marginBottom: '1rem',
           }}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent)', letterSpacing: '0.08em' }}>
-              OFERTAS Y DESCUENTOS
-            </span>
+            <span style={{ fontSize: '0.75rem', fontWeight:700, color: 'var(--accent)', letterSpacing: '0.08em' }}>
+            PROMOCIONES TECHMARKET
+           </span>
           </div>
           <h1 style={{
             fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 6vw, 4rem)',
             fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: '0.75rem',
           }}>
-            Promociones de la semana
+            Ofertas y descuentos
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '520px', margin: '0 auto' }}>
-            Descuentos exclusivos en herramientas y materiales. Usa nuestros códigos al realizar tu pedido.
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '620px', margin: '0 auto' }}>
+          Encuentra promociones especiales en computadoras, celulares, accesorios y tecnología. Aprovecha nuestros descuentos y encuentra el producto ideal para ti.
           </p>
         </div>
       </section>

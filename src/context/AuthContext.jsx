@@ -60,7 +60,7 @@ export function AuthProvider({ children }) {
       const status = err.response?.status
       if (status === 401 || status === 403) logout()
     })
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, []) 
 
   async function _persistLogin(tk, userFromResponse) {
     localStorage.setItem('token', tk)

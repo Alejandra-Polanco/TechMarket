@@ -32,10 +32,46 @@ export const BRANDS = [
 ]
 
 export const IDEAS = [
-  { title:'Cómo instalar una llave de agua',    desc:'Guía paso a paso para cambiar o instalar llaves de agua en tu hogar sin necesidad de un plomero.', img:'https://images.unsplash.com/photo-1503788943072-cd614c3056cf?w=400&q=80', tag:'Fontanería',   tiempo:'30 min' },
-  { title:'Pintar paredes como un profesional',  desc:'Técnicas y consejos para lograr un acabado perfecto en tus paredes con los productos correctos.',   img:'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=400&q=80', tag:'Pintura',      tiempo:'2 horas' },
-  { title:'Instalar un tomacorriente',           desc:'Aprende a instalar o reemplazar tomacorrientes de forma segura siguiendo el código eléctrico.',     img:'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=400&q=80', tag:'Eléctrico',    tiempo:'45 min' },
-  { title:'Construir una pared de block',        desc:'Todo lo que necesitas saber para levantar una pared de block resistente y bien nivelada.',          img:'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80', tag:'Construcción', tiempo:'1 día' },
-  { title:'Cómo usar un taladro correctamente',  desc:'Guía básica para principiantes sobre el uso seguro y efectivo del taladro en diferentes materiales.',img:'https://images.unsplash.com/photo-1546827209-a218e99fdbe9?w=400&q=80', tag:'Herramientas', tiempo:'15 min' },
-  { title:'Medir y nivelar como experto',        desc:'Usa correctamente los instrumentos de medición para obtener resultados precisos en tus proyectos.', img:'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=400&q=80', tag:'Medición',     tiempo:'20 min' },
+  {
+    title: 'Cómo elegir una laptop para estudiar',
+    desc: 'Conoce qué características debes considerar al elegir una laptop para estudiar, realizar tareas, programar y trabajar con diferentes aplicaciones.',
+    img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80',
+    tag: 'Computadoras',
+    tiempo: '5 min'
+  },
+  {
+    title: 'Cómo cuidar la batería de tu celular',
+    desc: 'Descubre recomendaciones sencillas para prolongar la vida útil de la batería de tu smartphone y mejorar su rendimiento diario.',
+    img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80',
+    tag: 'Celulares',
+    tiempo: '4 min'
+  },
+  {
+    title: 'Cómo elegir los audífonos adecuados',
+    desc: 'Aprende qué aspectos debes comparar al comprar audífonos, como comodidad, calidad de sonido, conectividad y duración de batería.',
+    img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80',
+    tag: 'Audio',
+    tiempo: '5 min'
+  },
+  {
+    title: 'Teclado mecánico vs. teclado convencional',
+    desc: 'Conoce las principales diferencias entre un teclado mecánico y uno convencional para elegir la mejor opción para estudiar, trabajar o jugar.',
+    img: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80',
+    tag: 'Gaming',
+    tiempo: '6 min'
+  },
+  {
+    title: 'Cómo elegir un mouse para gaming',
+    desc: 'Descubre qué debes considerar al elegir un mouse gaming, incluyendo ergonomía, sensibilidad, botones adicionales y tipo de sensor.',
+    img: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&q=80',
+    tag: 'Gaming',
+    tiempo: '5 min'
+  },
+  {
+    title: 'Accesorios esenciales para tu computadora',
+    desc: 'Conoce algunos accesorios que pueden mejorar tu experiencia al estudiar, trabajar o disfrutar de contenido desde tu computadora.',
+    img: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80',
+    tag: 'Accesorios',
+    tiempo: '7 min'
+  }
 ]

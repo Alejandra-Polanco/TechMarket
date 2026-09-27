@@ -4,12 +4,11 @@ import { IDEAS } from '../data/products'
 
 /* ── Tag colors ──────────────────────────────────────────── */
 const TAG_COLORS = {
-  Fontanería:   { bg: '#eff6ff', color: '#2563eb' },
-  Pintura:      { bg: '#fdf4ff', color: '#9333ea' },
-  Eléctrico:    { bg: '#fffbeb', color: '#d97706' },
-  Construcción: { bg: '#fff7ed', color: '#ea580c' },
-  Herramientas: { bg: '#f0fdf4', color: '#16a34a' },
-  Medición:     { bg: '#ecfdf5', color: '#059669' },
+  Computadoras: { bg: '#eff6ff', color: '#2563eb' },
+  Celulares:    { bg: '#fdf4ff', color: '#9333ea' },
+  Audio:        { bg: '#fffbeb', color: '#d97706' },
+  Gaming:       { bg: '#fff7ed', color: '#ea580c' },
+  Accesorios:   { bg: '#f0fdf4', color: '#16a34a' },
 }
 
 function getTagCfg(tag) {
@@ -18,12 +17,10 @@ function getTagCfg(tag) {
 
 /* ── Difficulty badge ────────────────────────────────────── */
 const TIME_DIFFICULTY = {
-  '15 min': { label: 'Principiante', color: '#16a34a', bg: '#ecfdf5' },
-  '20 min': { label: 'Principiante', color: '#16a34a', bg: '#ecfdf5' },
-  '30 min': { label: 'Básico',       color: '#2563eb', bg: '#dbeafe' },
-  '45 min': { label: 'Básico',       color: '#2563eb', bg: '#dbeafe' },
-  '2 horas': { label: 'Intermedio',  color: '#d97706', bg: '#fffbeb' },
-  '1 día':  { label: 'Avanzado',     color: '#dc2626', bg: '#fee2e2' },
+  '4 min': { label: 'Consejo rápido', color: '#16a34a', bg: '#ecfdf5' },
+  '5 min': { label: 'Guía básica',    color: '#2563eb', bg: '#dbeafe' },
+  '6 min': { label: 'Comparativa',    color: '#9333ea', bg: '#fdf4ff' },
+  '7 min': { label: 'Recomendaciones', color: '#d97706', bg: '#fffbeb' },
 }
 
 /* ── IdeaCard ────────────────────────────────────────────── */
@@ -175,9 +172,9 @@ function IdeasPage() {
           }}>
             Ideas y soluciones
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '520px', margin: '0 auto' }}>
-            Guías paso a paso para que puedas hacer tus proyectos del hogar con las herramientas correctas.
-          </p>
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '620px', margin: '0 auto' }}>
+  Guías, consejos y recomendaciones para ayudarte a elegir, cuidar y aprovechar mejor tus productos tecnológicos.
+</p>
         </div>
       </section>
 

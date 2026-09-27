@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Rol {
+  ADMIN
+  CLIENTE
+  OPERADOR
+}
+
+enum EstadoPedido {
+  PENDIENTE_CONFIRMACION
+  CONFIRMADO
+  EN_RUTA
+  ENTREGADO
+  CANCELADO
+}
+
+model Usuario {
+  id        Int        @id @default(autoincrement())
+  nombre    String
+  telefono  String?
+  direccion String?
+  email     String     @unique
+  password  String
+  rol       Rol        @default(CLIENTE)
+  activo    Boolean    @default(true)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  pedidos   Pedido[]
+  favoritos Favorito[]
+
+  @@map("usuarios")
+}
+
+model Categoria {
+  id          Int        @id @default(autoincrement())
+  nombre      String     @unique
+  descripcion String?
+  activo      Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  productos   Producto[]
+
+  @@map("categorias")
+}
+
+model Producto {
+  id              Int      @id @default(autoincrement())
+  nombre          String
+  descripcion     String?
+  marca           String?
+  precio_venta    Decimal  @db.Decimal(10, 2)
+  precio_anterior Decimal? @db.Decimal(10, 2)
+  stock           Int      @default(0)
+  imagen          String?
+  badge           String?
+  activo          Boolean  @default(true)
+
+  categoria_id Int?
+  categoria    Categoria? @relation(fields: [categoria_id], references: [id])
+
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  carritoItems  CarritoItem[]
+  detallePedido DetallePedido[]
+  favoritos     Favorito[]
+
+  @@map("productos")
+}
+
+model CarritoItem {
+  id Int @id @default(autoincrement())
+
+  session_id String
+  cantidad   Int    @default(1)
+
+  producto_id Int
+  producto    Producto @relation(fields: [producto_id], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([session_id, producto_id])
+  @@map("carrito_items")
+}
+
+model Pedido {
+  id Int @id @default(autoincrement())
+
+  usuario_id Int
+  usuario    Usuario @relation(fields: [usuario_id], references: [id])
+
+  direccion_entrega String
+  observaciones     String?
+
+  total Decimal @db.Decimal(10, 2)
+
+  estado EstadoPedido @default(PENDIENTE_CONFIRMACION)
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  detalle_pedido DetallePedido[]
+
+  @@map("pedidos")
+}
+
+model DetallePedido {
+  id Int @id @default(autoincrement())
+
+  pedido_id Int
+  pedido    Pedido @relation(fields: [pedido_id], references: [id], onDelete: Cascade)
+
+  producto_id Int
+  producto    Producto @relation(fields: [producto_id], references: [id])
+
+  cantidad        Int
+  precio_unitario Decimal @db.Decimal(10, 2)
+  subtotal        Decimal @db.Decimal(10, 2)
+
+  @@map("detalle_pedido")
+}
+
+model Favorito {
+  id Int @id @default(autoincrement())
+
+  usuario_id Int
+  usuario    Usuario @relation(fields: [usuario_id], references: [id], onDelete: Cascade)
+
+  producto_id Int
+  producto    Producto @relation(fields: [producto_id], references: [id], onDelete: Cascade)
+
+  created_at DateTime @default(now())
+
+  @@unique([usuario_id, producto_id])
+  @@map("favoritos")
+}

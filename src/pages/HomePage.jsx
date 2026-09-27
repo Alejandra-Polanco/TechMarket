@@ -92,13 +92,15 @@ function HomePage() {
       <Hero />
 
       {/* Carrusel destacados */}
-      {!search && !catFilter && featured.length > 0 && (
-        <ProductCarousel
-          products={featured}
-          title="Productos destacados"
-          subtitle="Las mejores herramientas y materiales para tu proyecto"
-        />
-      )}
+{!search && !catFilter && featured.length > 0 && (
+  <section id="productos" style={{ scrollMarginTop: '120px' }}>
+    <ProductCarousel
+      products={featured}
+      title="Productos destacados"
+      subtitle="Encuentra tecnología, accesorios y equipos para tus necesidades"
+    />
+  </section>
+)}
 
       {/* Categorías */}
       <section className="section section--gray">
@@ -166,8 +168,8 @@ function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section__header">
-            <h2 className="section__title">Todos los productos</h2>
-            <p className="section__subtitle">Herramientas, materiales y equipos al mejor precio</p>
+            <h2 className="section__title">Tecnología</h2>
+            <p className="section__subtitle">accesorios y equipos al mejor precio</p>
           </div>
 
           {/* Filtros */}

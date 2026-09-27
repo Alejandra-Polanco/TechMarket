@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 
 function Toast({ message, onRemove }) {
   useEffect(() => {
-    const timer = setTimeout(onRemove, 3000)
-    return () => clearTimeout(timer)
-  }, [])
+  const timer = setTimeout(onRemove, 3000)
+  return () => clearTimeout(timer)
+}, [onRemove])
 
   return (
     <div className="toast">

@@ -1,0 +1,16 @@
+# Variables de entorno
+.env
+
+# Dependencias
+node_modules/
+
+# Prisma generado
+/generated/prisma
+
+# Herramientas auxiliares
+.agents/
+.claude/
+.windsurf/
+
+# Archivos auxiliares de skills
+skills-lock.json
